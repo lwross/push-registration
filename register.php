@@ -8,6 +8,7 @@ try {
 		$myclient = new ET_Client();
 
 		$dataExtensionExternalKey = getenv('PUSH_REGISTRATION_DE_EXTERNAL_KEY');
+		$dataExtensionName = getenv('PUSH_REGISTRATION_DE_NAME');//"BrowserPushSubscribers";
 			
 		// Add a row to a DataExtension 
 		$request_body = file_get_contents('php://input');
@@ -35,6 +36,7 @@ try {
 								  "AuthKey" => $authKey,
 								  "p256dhKey" => $p256dhKey,
 								  "Subscription" => json_encode($subscription));
+		$postDRRow->Name = $dataExtensionName;	
 		$postResult = $postDRRow->post();
 		print_r('Post Status: '.($postResult->status ? 'true' : 'false')."\n");
 		print 'Code: '.$postResult->code."\n";

@@ -11,6 +11,9 @@
     "APP_CENTER_API_INTEGRATION_CLIENT_SECRET":{
       "required":false
     },
+    "PUSH_REGISTRATION_DE_NAME":{
+      "required":false
+    },
     "PUSH_REGISTRATION_DE_EXTERNAL_KEY":{
       "required":false
     },
