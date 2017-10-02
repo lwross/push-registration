@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: application/manifest+json');
-echo json_encode($manifest);
 $manifest = [
     "name" => "Push Demo",
     "short_name" => "Push Demo",
@@ -13,3 +12,4 @@ $manifest = [
         "type" => "image/png"
     ]
 ];
+echo json_encode($manifest);
