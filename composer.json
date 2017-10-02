@@ -1,0 +1,24 @@
+{
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
+    },
+    "name": "exacttarget/fuel-sdk-php",
+    "description": "ExactTarget Fuel SDK for PHP",
+    "homepage": "https://code.exacttarget.com/apis-sdks/fuel-sdks/",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "ext-curl": "*",
+        "ext-openssl": "*",
+        "ext-soap": "*",
+        "ext-mcrypt" : "*",
+        "php": ">=5.2.3",
+        "ext-http" : "*",
+        "minishlink/web-push": "^1.0"
+    },
+    "autoload": {
+        "files": [
+            "ET_Client.php"
+        ]
+    }
+}
