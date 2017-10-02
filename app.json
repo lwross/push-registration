@@ -17,8 +17,11 @@
     "PUSH_REGISTRATION_DE_EXTERNAL_KEY":{
       "required":false
     },
-  	"GCM_API_KEY":{
+  	"GCM_SERVER_KEY":{
   		"required":false
-  	}
+  	},
+    "GCM_SENDER_ID":{
+      "required":false
+    }
   }
 }
