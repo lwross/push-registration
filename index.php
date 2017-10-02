@@ -4,7 +4,7 @@
     <title>Push Messaging &amp; Notifications</title>
 
     <link rel="icon" href="../images/favicon.ico">
-    <link rel="manifest" href="manifest.json.php">
+    <link rel="manifest" href="manifest.json">
 
   </head>
 
