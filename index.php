@@ -1,3 +1,22 @@
+<?php
+/*
+if (file_exists ( ABSPATH . 'manifest.json' )) {
+  $oldManifestJson = file_get_contents ( ABSPATH . 'manifest.json' );
+} else {
+  $oldManifestJson = '{}';
+}
+$data = json_decode ( $oldManifestJson, true );
+
+$data ['gcm_sender_id'] = $settings ['gcm_sender_id'];
+$data ['gcm_user_visible_only'] = true;
+$newManifestJson = json_encode ( $data );
+if ( is_writable ( ABSPATH . 'manifest.json' ) || !file_exists ( ABSPATH . 'manifest.json' ) && is_writable ( ABSPATH ) ) {
+  file_put_contents ( ABSPATH . 'manifest.json', $newManifestJson );
+} else {
+  // display an error
+}
+*/
+?>
 <html lang="en">
   <head>
 
