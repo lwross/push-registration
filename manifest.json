@@ -7,5 +7,5 @@
       }],
   "start_url": "./index.html?homescreen=1",
   "display": "standalone",
-  "gcm_sender_id": "<your GMC Sender ID>"
+  "gcm_sender_id": "82415342949"
 }
