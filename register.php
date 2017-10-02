@@ -7,8 +7,7 @@ use Minishlink\WebPush\WebPush;
 try {	
 		$myclient = new ET_Client();
 
-		$dataExtensionExternalKey = "BrowserPushSubscribersExternalKey";
-		$dataExtensionName = "BrowserPushSubscribers";
+		$dataExtensionExternalKey = getenv('PUSH_REGISTRATION_DE_EXTERNAL_KEY');
 			
 		// Add a row to a DataExtension 
 		$request_body = file_get_contents('php://input');
@@ -18,7 +17,6 @@ try {
 		$lastName = $request_data->lastName;
 		$email = $request_data->email;
 		$browserPushOptin = $request_data->browserPushOptin;
-
 
 		$authKey = $request_data->subscription->keys->auth;
 		$p256dhKey = $request_data->subscription->keys->p256dh;
@@ -37,7 +35,6 @@ try {
 								  "AuthKey" => $authKey,
 								  "p256dhKey" => $p256dhKey,
 								  "Subscription" => json_encode($subscription));
-		$postDRRow->Name = $dataExtensionName;	
 		$postResult = $postDRRow->post();
 		print_r('Post Status: '.($postResult->status ? 'true' : 'false')."\n");
 		print 'Code: '.$postResult->code."\n";
@@ -52,24 +49,6 @@ try {
 		print 'Code: '.$patchResult->code."\n";
 		print 'Message: '.$patchResult->message."\n";	
 		print 'Result Count: '.count($patchResult->results)."\n";
-
-		/*
-		// Delete a row from a DataExtension 
-		print_r("Delete a row from a DataExtension   \n");
-		$deleteDRRow = new ET_DataExtension_Row();
-		$deleteDRRow->authStub = $myclient;
-		$deleteDRRow->props = array("Key" => $dataExtensionExternalKey, "Value" => "ItWorksUPDATED!");
-		$deleteDRRow->CustomerKey = $DataExtensionName;	
-		$deleteResult = $deleteDRRow->delete();
-		print_r('Delete Status: '.($deleteResult->status ? 'true' : 'false')."\n");
-		print 'Code: '.$deleteResult->code."\n";
-		print 'Message: '.$deleteResult->message."\n";	
-		print 'Result Count: '.count($deleteResult->results)."\n";
-		print 'Results: '."\n";
-		print_r($deleteResult->results);
-		print "\n---------------\n";
-		*/
-		
 	}
 
 	catch (Exception $e) {
