@@ -1,7 +1,7 @@
 {
   "name": "Web Push Registration",
   "description": "Register for Web Push notifications.",
-  "repository": "https://github.com/lwross/personalised-browser-push-notification/tree/develop",
+  "repository": "https://github.com/lwross/push-registration",
   "keywords": ["journey", "builder", "marketing", "cloud", "custom", "activity", "salesforce"],
   "logo": "http://image.s6.exacttarget.com/lib/fe9112727360007b77/m/1/Salesforce_Marketing_Cloud.png",
   "env": {
