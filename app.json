@@ -5,23 +5,29 @@
   "keywords": ["journey", "builder", "marketing", "cloud", "custom", "activity", "salesforce"],
   "logo": "http://image.s6.exacttarget.com/lib/fe9112727360007b77/m/1/Salesforce_Marketing_Cloud.png",
   "env": {
-  	"APP_CENTER_API_INTEGRATION_CLIENTID":{
-      "required":false
+  	"APP_CENTER_API_INTEGRATION_CLIENTID": {
+      "description": "Marketing Cloud App Center Authentication and Integration Client ID.",
+      "required": "true"
     },
-    "APP_CENTER_API_INTEGRATION_CLIENT_SECRET":{
-      "required":false
+    "APP_CENTER_API_INTEGRATION_CLIENT_SECRET": {
+      "description": "Marketing Cloud App Center Authentication and Integration Client Secret.",
+      "required": "true"
     },
-    "PUSH_REGISTRATION_DE_NAME":{
-      "required":false
+    "PUSH_REGISTRATION_DE_NAME": {
+      "description": "DE Name of Marketing Cloud Data Extension used to store web push registrations",
+      "required": "true"
     },
     "PUSH_REGISTRATION_DE_EXTERNAL_KEY":{
-      "required":false
+      "description": "DE External Key of Marketing Cloud Data Extension used to store web push registrations",
+      "required": "true"
     },
-  	"GCM_SERVER_KEY":{
-  		"required":false
-  	},
-    "GCM_SENDER_ID":{
-      "required":false
+    "GCM_SENDER_ID": {
+      "description": "Google Cloud Messaging Sender ID.  Can be found https://console.firebase.google.com in YourProject->Settings->CLOUD MESSAGING",
+      "required": "true"
+    },
+    "GCM_SERVER_KEY": {
+      "description": "Google Cloud Messaging Server Key.  Can be found https://console.firebase.google.com in YourProject->Settings->CLOUD MESSAGING",
+      "required": "true"
     }
   }
 }
