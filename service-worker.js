@@ -3,8 +3,8 @@
 self.addEventListener('push', function(event) {
   console.log('Received a push message', event);
 
-  var title = 'Push Title';
-  var body = 'Push Body';
+  var title = 'MyDeal';
+  var body = 'Free Shipping Friday - TVs & Projectors';
   var icon = 'https://www.videopro.com.au/images/product/micro/8491_1.jpg';
   var tag = 'Push Tag';
 
